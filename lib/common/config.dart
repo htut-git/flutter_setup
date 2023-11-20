@@ -1,4 +1,4 @@
-import '../enum/app_enum.dart';
+import 'enum/app_enum.dart';
 
 class AppConfig {
   static const AppMode appMode = AppMode.local;

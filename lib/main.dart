@@ -1,13 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/api/api_service.dart';
-import 'package:flutter_setup/app/config.dart';
-import 'package:flutter_setup/app/controller_binding.dart';
-import 'package:flutter_setup/helper/app_helper.dart';
+import 'package:flutter_setup/common/config.dart';
+import 'package:flutter_setup/common/controller_binding.dart';
+import 'package:flutter_setup/common/app_helper.dart';
 import 'package:flutter_setup/lang/language.dart';
 import 'package:flutter_setup/routes/route.dart';
 import 'package:get/get.dart';
-import 'enum/app_enum.dart';
+import 'common/enum/app_enum.dart';
 import 'package:get_storage/get_storage.dart';
 
 void main() async {
@@ -16,7 +16,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-   MyApp({super.key});
+  MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     Dio dio = Dio();

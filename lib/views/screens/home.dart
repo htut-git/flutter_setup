@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_setup/controller/language_controller.dart';
-import 'package:flutter_setup/controller/user_controller.dart';
+import 'package:flutter_setup/app/controller/language_controller.dart';
+import 'package:flutter_setup/app/services/user_service.dart';
 import 'package:get/get.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
   @override
   Widget build(BuildContext context) {
-    UserController userController = Get.find();
+    UserService userService = Get.find();
     LanguageController languageController = Get.find();
     return Scaffold(
         appBar: AppBar(
@@ -31,10 +31,10 @@ class Home extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GetX<UserController>(
+              GetX<UserService>(
                 builder: (controller) {
                   return Text(
-                      'Login User is ${userController.user.value?.name ?? ''}');
+                      'Login User is ${controller.user.value?.name ?? ''}');
                 },
               )
             ],

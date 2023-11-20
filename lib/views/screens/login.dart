@@ -1,7 +1,7 @@
 // ignore_for_file: sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
-import 'package:flutter_setup/controller/login_controller.dart';
+import 'package:flutter_setup/app/controller/login_controller.dart';
 import 'package:get/get.dart';
 
 class Login extends StatelessWidget {

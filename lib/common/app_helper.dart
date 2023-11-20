@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_setup/app/config.dart';
+import 'package:flutter_setup/common/config.dart';
 
-import '../enum/app_enum.dart';
+import 'enum/app_enum.dart';
 
 class AppHelper {
   static bool showNetworkLogBody() {

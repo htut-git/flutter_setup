@@ -1,5 +1,5 @@
-import 'package:flutter_setup/app/config.dart';
-import 'package:flutter_setup/modal/login_response.dart';
+import 'package:flutter_setup/common/config.dart';
+import 'package:flutter_setup/data/modal/login_response.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart' hide Headers;
 part 'api_service.g.dart';

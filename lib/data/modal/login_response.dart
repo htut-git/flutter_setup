@@ -1,4 +1,4 @@
-import 'package:flutter_setup/modal/user.dart';
+import 'package:flutter_setup/data/modal/user.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'login_response.g.dart';
 

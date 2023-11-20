@@ -1,5 +1,5 @@
-import 'package:flutter_setup/screens/home.dart';
-import 'package:flutter_setup/screens/login.dart';
+import 'package:flutter_setup/views/screens/home.dart';
+import 'package:flutter_setup/views/screens/login.dart';
 import 'package:get/route_manager.dart';
 
 class AppRoutes {
