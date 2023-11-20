@@ -12,9 +12,7 @@ class _ApiService implements ApiService {
   _ApiService(
     this._dio, {
     this.baseUrl,
-  }) {
-    baseUrl ??= 'https://bnftopup.official-crystal.com/api/v1/';
-  }
+  });
 
   final Dio _dio;
 
@@ -27,9 +25,7 @@ class _ApiService implements ApiService {
   ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{
-      r'x-authorization': '438c37c8a0e4a7c645ac3ed7cf16f4f5e74b6234'
-    };
+    final _headers = <String, dynamic>{r'x-authorization': ''};
     _headers.removeWhere((k, v) => v == null);
     final _data = {
       'mobile': mobile,

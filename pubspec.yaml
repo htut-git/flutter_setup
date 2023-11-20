@@ -41,8 +41,8 @@ dependencies:
   cached_network_image: ^3.3.0
   json_annotation: ^4.8.1
   dio: ^5.3.3
-  shared_preferences: ^2.2.2
   diox_flutter_transformer:
+  get_storage:
 
 dev_dependencies:
   flutter_test:

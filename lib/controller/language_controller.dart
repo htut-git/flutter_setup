@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:get_storage/get_storage.dart';
 
 class LanguageController extends GetxController {
+  final GetStorage _storage = Get.find();
+
   @override
   void onInit() {
     loadLocale();
     super.onInit();
   }
 
-  Future<void> loadLocale() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    String locale = prefs.getString('locale') ?? 'en_US';
+
+  void loadLocale() {
+    String locale = _storage.read('locale') ?? 'en_US';
+    print(locale);
     Get.updateLocale(Locale(locale));
   }
 
-  Future<void> changeLanguage(Locale newLocale) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString('locale', newLocale.toString());
+  void changeLanguage(Locale newLocale){
+    _storage.write('locale', newLocale.toString());
     Get.updateLocale(newLocale);
   }
+  
 }

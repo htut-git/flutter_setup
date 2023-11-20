@@ -8,13 +8,15 @@ import 'package:flutter_setup/lang/language.dart';
 import 'package:flutter_setup/routes/route.dart';
 import 'package:get/get.dart';
 import 'enum/app_enum.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  await GetStorage.init();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     Dio dio = Dio();
