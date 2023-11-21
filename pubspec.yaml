@@ -42,7 +42,8 @@ dependencies:
   json_annotation: ^4.8.1
   dio: ^5.3.3
   diox_flutter_transformer:
-  get_storage:
+  get_storage: ^2.1.1
+  connectivity_plus: ^5.0.1
 
 dev_dependencies:
   flutter_test:

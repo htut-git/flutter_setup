@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/api/api_service.dart';
 import 'package:flutter_setup/common/config.dart';
-import 'package:flutter_setup/common/controller_binding.dart';
+import 'package:flutter_setup/common/app_binding.dart';
 import 'package:flutter_setup/common/app_helper.dart';
 import 'package:flutter_setup/lang/language.dart';
 import 'package:flutter_setup/routes/route.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
     }
     Get.put(ApiService(dio));
     return GetMaterialApp(
-      initialBinding: ControllerBinding(),
+      initialBinding: AppBinding(),
       title: 'Flutter App',
       initialRoute: '/',
       translations: Language(),
