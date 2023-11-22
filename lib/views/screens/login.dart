@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
-  final LoginController loginController = LoginController();
   @override
   Widget build(BuildContext context) {
+    final LoginController loginController = Get.put(LoginController());
     return Scaffold(
       appBar: AppBar(title: const Text('Login Page')),
       body: Container(

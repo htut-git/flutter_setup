@@ -18,4 +18,17 @@ class LoginController extends GetxController {
   void setUser(User user) {
     userService.saveUser(user);
   }
+
+  @override
+  void onInit() {
+    print('inint LoginController');
+    super.onInit();
+  }
+
+  @override
+  void onClose() {
+    print('close');
+    // TODO: implement onClose
+    super.onClose();
+  }
 }
