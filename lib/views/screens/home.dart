@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_setup/app/controller/language_controller.dart';
+import 'package:flutter_setup/app/services/networkcheck_service.dart';
 import 'package:flutter_setup/app/services/user_service.dart';
 import 'package:get/get.dart';
 
@@ -46,6 +47,15 @@ class Home extends StatelessWidget {
                     languageController.changeLanguage(Locale('my_MM'));
                   },
                   child: Text('Change Language'))
+            ],
+          ),
+          Row(
+            children: [
+              GetX<NetworkcheckService>(
+              builder: (controller) {
+                return Text('Network Connection is ${controller.networkStatus.value ? 'Connected' : 'Cannot Connected!'}');
+              },
+            )
             ],
           )
         ]));

@@ -1,9 +1,8 @@
 import 'dart:async';
-import 'dart:io';
-
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 class NetworkcheckService extends GetxService {
   RxBool networkStatus = true.obs;
@@ -27,6 +26,17 @@ class NetworkcheckService extends GetxService {
   Future<void> checkConnection() async {
     final result = await Connectivity().checkConnectivity();
     networkStatus.value = (result != ConnectivityResult.none);
+    try {
+      // not work in Browser 
+      var isDeviceConnected = await InternetConnectionChecker().hasConnection;
+      if (isDeviceConnected) {
+        networkStatus.value = true;
+      }else{
+        networkStatus.value = false;
+      }
+    } catch (e) {
+      debugPrint(e.toString());
+    }
     showSnackBarConnectionStatus();
   }
 
